@@ -5,7 +5,7 @@ Para empezar con Next.js y Material Design La manera mas sencilla es descargar e
 https://github.com/mui-org/material-ui/tree/master/examples/nextjs
 
 
-una vez descargado instalas las dependencias.
+una vez descargado se intalan las dependencias.
 yarn o npm install
 
 Para probarlo
@@ -15,10 +15,10 @@ yarn dev o npm run dev
 Sitio de material-ui
 https://material-ui.com/
 
-Aqui se pueden encontrar algunos ejemplos
+Aquí se pueden encontrar algunos ejemplos de páginas
 https://material-ui.com/getting-started/page-layout-examples/
 
-algunos ejemplo utilizan la librería  @material-ui/icons, para instalarla
+Hay ejemplos que utilizan la librería  @material-ui/icons, para instalarla
 yarn add @material-ui/icons o npm install @material-ui/icons
 
 
