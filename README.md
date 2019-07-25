@@ -1,6 +1,6 @@
 # Next.js con Material Design UI
 
-Para empezar con Next.js y Material Design La manera mas sencilla es descargar el ejemplo del github de material-ui.\
+Para empezar con Next.js y Material Design La manera mas sencilla es descargar el ejemplo del github de material-ui.
 
 https://github.com/mui-org/material-ui/tree/master/examples/nextjs
 
