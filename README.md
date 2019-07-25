@@ -6,10 +6,10 @@ https://github.com/mui-org/material-ui/tree/master/examples/nextjs
 
 
 una vez descargado se intalan las dependencias.\
-yarn o npm install
+`yarn` o `npm install`
 
 Para probarlo.\
-yarn dev o npm run dev
+`yarn dev` o `npm run dev`
 
 
 Sitio de material-ui.\
@@ -19,7 +19,7 @@ Aquí se pueden encontrar algunos ejemplos de páginas.\
 https://material-ui.com/getting-started/page-layout-examples/
 
 Hay ejemplos que utilizan la librería  @material-ui/icons, para instalarla.\
-yarn add @material-ui/icons o npm install @material-ui/icons
+`yarn add @material-ui/icons` o `npm install @material-ui/icons`
 
 
 Sitio de next.js.\
