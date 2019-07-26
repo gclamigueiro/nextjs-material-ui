@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 
 import Typography from '@material-ui/core/Typography';
@@ -50,17 +50,21 @@ export default function Album() {
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Album layout
+          <Container maxWidth="md">
+
+           <Grid container spacing={8}   alignItems="center" >
+             
+           <Grid item xs={12} sm={6}>
+            <Typography component="h1" variant="h2"  color="textPrimary" gutterBottom>
+              Some Title
             </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            <Typography variant="h5" color="textSecondary" paragraph>
               Something short and leading about the collection below—its contents, the creator, etc.
               Make it short and sweet, but not too short so folks don&apos;t simply skip over it
               entirely.
             </Typography>
             <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
+              <Grid container spacing={2} justify="flex-start">
                 <Grid item>
                 <NextLink href='/about' prefetch>
                   <Button variant="contained" color="primary">
@@ -75,10 +79,26 @@ export default function Album() {
                 </Grid>
               </Grid>
             </div>
+            </Grid>
+            
+            <Grid item xs={12} sm={6} >
+            <Typography variant="h5" align='right' color="textSecondary" paragraph>
+              here you can put something else
+              </Typography>
+            </Grid>
+            
+            </Grid>
+          
           </Container>
         </div>
+         {/* End hero unit */}
         <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
+         
+        <Typography component="h2" variant="h2" align='center'  color="textPrimary" gutterBottom>
+              Services
+        </Typography>
+
+
           <Grid container spacing={4}>
             {cards.map(card => (
               <Grid item key={card} xs={12} sm={6} md={4}>

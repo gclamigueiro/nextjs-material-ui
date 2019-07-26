@@ -56,12 +56,12 @@ const MobileMenu = () => {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <NextLink href="/about" prefetch as="nosotros">
-          <MenuItem onClick={handleClose}>Nosotros</MenuItem>
+        <NextLink href="/about" prefetch>
+          <MenuItem onClick={handleClose}>About</MenuItem>
         </NextLink>
-        <MenuItem onClick={handleClose}>Servicios</MenuItem>
-        <MenuItem onClick={handleClose}>Registrarse</MenuItem>
-        <MenuItem onClick={handleClose}>Login</MenuItem>
+        <MenuItem onClick={handleClose}>Services</MenuItem>
+        <MenuItem onClick={handleClose}>Sign up</MenuItem>
+        <MenuItem onClick={handleClose}>Sign in</MenuItem>
       </Menu>
     </div>
   );
@@ -81,13 +81,13 @@ export default function Topbar() {
           </NextLink>
 
           <Hidden xsDown>
-            <NextLink href="/about" prefetch as="nosotros">
-              <Button color="inherit">Nosotros</Button>
+            <NextLink href="/about" prefetch>
+              <Button color="inherit">About</Button>
             </NextLink>
-            <Button color="inherit">Servicios</Button>
+            <Button color="inherit">Services</Button>
              <i className='vseparator'></i>
-            <Button color="inherit">Registrarse</Button>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit">Sign up</Button>
+            <Button color="inherit">Sign in</Button>
           </Hidden>
 
           <Hidden smUp>{MobileMenu()}</Hidden>
