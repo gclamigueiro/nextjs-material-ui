@@ -10,6 +10,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
 import Hidden from "@material-ui/core/Hidden";
 import NextLink from "next/link";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,6 +71,7 @@ const MobileMenu = () => {
 
 export default function Topbar() {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <div className={classes.root}>
@@ -84,7 +87,22 @@ export default function Topbar() {
             <NextLink href="/about" prefetch>
               <Button color="inherit">About</Button>
             </NextLink>
-            <Button color="inherit">Services</Button>
+
+            { router.pathname == '/' ?
+            <Link
+            to="serviceSection"
+            smooth={true}
+            offset={-10}
+            duration= {500}
+            >  
+        <Button color="inherit">Services</Button>
+           </Link>
+        : 
+        <NextLink href="/#serviceSection" prefetch>
+        <Button color="inherit">Services</Button>
+        </NextLink>
+      }
+          
              <i className='vseparator'></i>
             <Button color="inherit">Sign up</Button>
             <Button color="inherit">Sign in</Button>

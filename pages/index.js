@@ -94,7 +94,7 @@ export default function Album() {
          {/* End hero unit */}
         <Container className={classes.cardGrid} maxWidth="md">
          
-        <Typography component="h2" variant="h2" align='center'  color="textPrimary" gutterBottom>
+        <Typography id="serviceSection"  component="h2" variant="h2" align='center'  color="textPrimary" gutterBottom>
               Services
         </Typography>
 
