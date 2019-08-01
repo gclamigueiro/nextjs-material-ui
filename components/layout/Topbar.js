@@ -9,8 +9,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
 import Hidden from "@material-ui/core/Hidden";
-import NextLink from "next/link";
-import { Link, animateScroll as scroll } from "react-scroll";
+// import NextLink from "next/link";
+import {Link} from '../../routes'
+import { Link as RLink, animateScroll as scroll } from "react-scroll";
 import { useRouter } from 'next/router';
 
 const useStyles = makeStyles(theme => ({
@@ -58,9 +59,9 @@ const MobileMenu = () => {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <NextLink href="/about" prefetch>
+        <Link route='about' prefetch>
           <MenuItem onClick={handleClose}>About</MenuItem>
-        </NextLink>
+        </Link>
         <MenuItem onClick={handleClose}>Services</MenuItem>
         <MenuItem onClick={handleClose}>Sign up</MenuItem>
         <MenuItem onClick={handleClose}>Sign in</MenuItem>
@@ -77,40 +78,40 @@ export default function Topbar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <NextLink href="/" prefetch>
+          <Link route='home' prefetch>
             <Typography variant="h6" className={classes.title}>
               Site Name
             </Typography>
-          </NextLink>
+          </Link>
 
           <Hidden xsDown>
-            <NextLink href="/about" prefetch>
+            <Link route='about' prefetch>
               <Button color="inherit">About</Button>
-            </NextLink>
+            </Link>
 
             {router.pathname == "/" ? (
-              <Link
+              <RLink
                 to="serviceSection"
                 smooth={true}
                 offset={-10}
                 duration={500}
               >
                 <Button color="inherit">Services</Button>
-              </Link>
+              </RLink>
             ) : (
-              <NextLink href="/#serviceSection" prefetch>
+              <Link href="/#serviceSection" prefetch>
                 <Button color="inherit">Services</Button>
-              </NextLink>
+              </Link>
             )}
             <i className="vseparator" />
 
-            <NextLink href="/register" prefetch>
+            <Link href="/register" prefetch>
               <Button color="inherit">Sign up</Button>
-            </NextLink>
+            </Link>
 
-            <NextLink href="/login" prefetch>
+            <Link href="/login" prefetch>
               <Button color="inherit">Sign in</Button>
-            </NextLink>
+            </Link>
           </Hidden>
 
           <Hidden smUp>{MobileMenu()}</Hidden>

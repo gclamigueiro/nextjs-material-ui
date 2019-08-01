@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 function Page({ name, titles, current }) {
   
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const [currentContent, SetCurrentContent] = React.useState(current);
 
@@ -196,9 +196,12 @@ function Page({ name, titles, current }) {
   );
 }
 
-Page.getInitialProps = async ({ req }) => {
+Page.getInitialProps = async ({ query,res }) => {
  // const res = await fetch('https://api.github.com/repos/developit/preact')
   // const json = await res.json()
+
+  const id = query.id;
+
   return {
     name: "Content",
     titles: [
@@ -229,8 +232,8 @@ Page.getInitialProps = async ({ req }) => {
       }
     ],
     current: {
-      id: 1,
-      name: "Content 1",
+      id: id,
+      name: "Content" + id,
       text: "Some text"
     }
   };

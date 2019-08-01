@@ -1,6 +1,6 @@
 
 import Button from '@material-ui/core/Button';
-import NextLink from 'next/link';
+import {Link} from '../routes'
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -65,18 +65,18 @@ export default function Album() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="flex-start">
                 <Grid item>
-                <NextLink href='/about' prefetch>
+                <Link route='about' prefetch>
                   <Button variant="contained" color="primary">
                     About
                   </Button>
-                 </NextLink>
+                 </Link>
                 </Grid>
                 <Grid item>
-                <NextLink href='/content' >
+                <Link route='content'  params={{ id: 2 }} >
                   <Button variant="outlined" color="primary">
                     Content page
                   </Button>
-                  </NextLink>
+                  </Link>
                 </Grid>
               </Grid>
             </div>

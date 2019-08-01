@@ -8,6 +8,7 @@
     "@material-ui/styles": "latest",
     "clsx": "latest",
     "next": "latest",
+    "next-routes": "^1.4.2",
     "nprogress": "^0.2.0",
     "prop-types": "latest",
     "react": "latest",
@@ -15,8 +16,8 @@
     "react-scroll": "^1.7.12"
   },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build"
   }
 }
