@@ -88,40 +88,42 @@ export default function Topbar() {
               <Button color="inherit">About</Button>
             </NextLink>
 
-            { router.pathname == '/' ?
-            <Link
-            to="serviceSection"
-            smooth={true}
-            offset={-10}
-            duration= {500}
-            >  
-        <Button color="inherit">Services</Button>
-           </Link>
-        : 
-        <NextLink href="/#serviceSection" prefetch>
-        <Button color="inherit">Services</Button>
-        </NextLink>
-      }
-          
-             <i className='vseparator'></i>
-            <Button color="inherit">Sign up</Button>
-            <Button color="inherit">Sign in</Button>
+            {router.pathname == "/" ? (
+              <Link
+                to="serviceSection"
+                smooth={true}
+                offset={-10}
+                duration={500}
+              >
+                <Button color="inherit">Services</Button>
+              </Link>
+            ) : (
+              <NextLink href="/#serviceSection" prefetch>
+                <Button color="inherit">Services</Button>
+              </NextLink>
+            )}
+            <i className="vseparator" />
+
+            <NextLink href="/register" prefetch>
+              <Button color="inherit">Sign up</Button>
+            </NextLink>
+
+            <NextLink href="/login" prefetch>
+              <Button color="inherit">Sign in</Button>
+            </NextLink>
           </Hidden>
 
           <Hidden smUp>{MobileMenu()}</Hidden>
         </Toolbar>
       </AppBar>
 
-
       <style jsx>{`
         .vseparator {
           border-right: 2px solid white;
-          padding:  15px 0px ;
-          margin:   0px 15px 0px 25px  ;
+          padding: 15px 0px;
+          margin: 0px 15px 0px 25px;
         }
       `}</style>
-
-
     </div>
   );
 }

@@ -16,7 +16,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import { Fragment } from 'react';
 import Container from '@material-ui/core/Container';
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 function Page({ name, titles, current }) {
   
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const [currentContent, SetCurrentContent] = React.useState(current);
 
