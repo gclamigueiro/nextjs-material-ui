@@ -9,7 +9,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
 import Hidden from "@material-ui/core/Hidden";
-// import NextLink from "next/link";
 import {Link} from '../../routes'
 import { Link as RLink, animateScroll as scroll } from "react-scroll";
 import { useRouter } from 'next/router';
@@ -27,10 +26,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-/* Menù que se visualiza en mòviles */
+/* Menú que se visualiza en móviles */
 const MobileMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const router = useRouter();
 
   function handleClick(event) {
     setAnchorEl(event.currentTarget);
@@ -62,9 +62,30 @@ const MobileMenu = () => {
         <Link route='about' prefetch>
           <MenuItem onClick={handleClose}>About</MenuItem>
         </Link>
-        <MenuItem onClick={handleClose}>Services</MenuItem>
+
+   
+        {router.pathname == "/" ? (
+              <RLink
+                to="serviceSection"
+                smooth={true}
+                offset={-10}
+                duration={500}
+              >
+                <MenuItem onClick={handleClose}>Services</MenuItem>
+              </RLink>
+            ) : (
+              <Link href="/#serviceSection" prefetch>
+                <MenuItem onClick={handleClose}>Services</MenuItem>
+              </Link>
+            )
+            }
+       
+        <Link route='register' prefetch>
         <MenuItem onClick={handleClose}>Sign up</MenuItem>
+        </Link>
+        <Link route='login' prefetch>
         <MenuItem onClick={handleClose}>Sign in</MenuItem>
+        </Link>
       </Menu>
     </div>
   );
@@ -105,11 +126,11 @@ export default function Topbar() {
             )}
             <i className="vseparator" />
 
-            <Link href="/register" prefetch>
+            <Link route='register' prefetch>
               <Button color="inherit">Sign up</Button>
             </Link>
 
-            <Link href="/login" prefetch>
+            <Link route='login' prefetch>
               <Button color="inherit">Sign in</Button>
             </Link>
           </Hidden>

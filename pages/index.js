@@ -51,7 +51,7 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container maxWidth="md">
 
-           <Grid container spacing={8}   alignItems="center" >
+           <Grid container spacing={4}   alignItems="center" >
              
            <Grid item xs={12} sm={6}>
             <Typography component="h1" variant="h2"  color="textPrimary" gutterBottom>
@@ -83,7 +83,7 @@ export default function Album() {
             </Grid>
             
             <Grid item xs={12} sm={6} >
-            <Typography variant="h5" align='right' color="textSecondary" paragraph>
+            <Typography variant="h5" align='center' color="textSecondary" paragraph>
               here you can put something else
               </Typography>
             </Grid>
