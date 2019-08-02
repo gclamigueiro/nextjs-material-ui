@@ -41,13 +41,13 @@ https://github.com/zeit/next.js/tree/master/examples/layout-component
 
 
 
-Para las rutas amigables se utiliza la librería next-routes 
+Para las urls dinámicas se utiliza la librería next-routes 
 
 `yarn add next-routes`
 
 https://www.npmjs.com/package/next-routes
 
-Esto nos permite crear URL amigables para el usuario y los buscadores, en vez de tener 
+Esto nos permite crear url amigables para el usuario y los buscadores, en vez de tener 
 `/content/?id=2` se tiene `/contenido/2`
 
 para esto es necesario definir el archivo `routes.js` y el `server.js`
