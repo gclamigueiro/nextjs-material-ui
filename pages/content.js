@@ -239,6 +239,4 @@ Page.getInitialProps = async ({ query,res }) => {
   };
 };
 
-
-
 export default Page
